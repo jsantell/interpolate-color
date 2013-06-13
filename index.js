@@ -12,7 +12,7 @@
  * @param {precision} number
  */
 
-var regex = /^hsl\(\s*([\d|\.]*)\s*,\s*([\d|\.]*)%\s*,\s*([\d|\.]*)%/;
+var regex = /^hsl\(\s*([\-|\d|\.]*)\s*,\s*([\d|\.]*)%\s*,\s*([\d|\.]*)%/;
 function interpolate (start, end, step, precision) {
   precision = precision != null ? precision : 0;
   start = start.match(regex);
@@ -24,12 +24,6 @@ function interpolate (start, end, step, precision) {
     endH   = +end[1],
     endS   = +end[2],
     endL   = +end[3];
-
-  // Shortest path, taken from D3's interpolation
-  if (endH > 180)
-    endH -= 360;
-  else if (endH < -180)
-    endH += 360;
 
   var
     h = (startH - (startH - endH) * step).toFixed(precision),

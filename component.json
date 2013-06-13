@@ -2,7 +2,7 @@
   "name": "interpolate-color",
   "repo": "jsantell/interpolate-color",
   "description": "A simple color interpolater",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Jordan Santell <jsantell@gmail.com>",
   "twitter": "@jsantell",
   "keywords": [

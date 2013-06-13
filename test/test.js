@@ -31,4 +31,8 @@ describe('Color Interpolator', function () {
       'hsl(60, 100%, 50%)'
     );
   });
+
+  it('accepts negative hue values', function () {
+    expect(i('hsl(-240, 100%, 50%)', red, 0.5)).to.equal('hsl(-120, 100%, 50%)');
+  });
 });
