@@ -15,7 +15,7 @@ var interpolate = require('interpolate-color');
 var red = 'hsl(0, 100%, 50%)';
 var green = 'hsl(120, 100%, 50%)';
 
-interpolate(red, blue, 0.5); // 'hsl(60, 100%, 50%)'
+interpolate(red, green, 0.5); // 'hsl(60, 100%, 50%)'
 ```
 
 ## API
